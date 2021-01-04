@@ -1,0 +1,41 @@
+{
+  "name": "gourcify",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "eslintConfig": {
+    "root": true,
+    "ignorePatterns": [
+      "node_modules/",
+      "coverage/"
+    ],
+    "extends": "logdna",
+    "parserOptions": {
+      "ecmaVersion": 2020,
+      "sourceType": "script"
+    },
+    "plugins": [],
+    "rules": {
+      "quote-props": 0,
+      "no-shadow": 0
+    }
+  },
+  "dependencies": {
+    "execa": "^5.0.0",
+    "got": "^11.8.1",
+    "keef": "^5.0.0",
+    "mkdirp": "^1.0.4",
+    "piscina": "^2.1.0",
+    "sharp": "^0.27.0"
+  },
+  "devDependencies": {
+    "eslint": "^7.16.0",
+    "eslint-config-logdna": "^4.0.2"
+  }
+}
