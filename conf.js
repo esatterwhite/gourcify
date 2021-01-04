@@ -8,6 +8,5 @@ module.exports = {
 , inputdir: process.cwd()
 , gource: {
     filename: 'gource.mp4'
-  , videosize: '1280x720'
   }
 }

@@ -66,7 +66,7 @@ async function combineHistory(repos) {
     return `${name}.txt`
   })
   const cwd = path.join(config.get('outputdir'), 'gitlog')
-  const writer = fs.createWriteStream(path.join(cwd, 'gource.txt'))
+  const writer = fs.createWriteStream(path.join(cwd, config.get('gource:filename')))
   const sort = execa('sort')
   const cat = execa('cat', names, {
     cwd: path.join(config.get('outputdir'), 'gitlog')
