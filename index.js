@@ -10,21 +10,21 @@ const repos = require('./lib/repos/index.js')
 const avatars = new Piscina({
   filename: path.resolve(__dirname, 'workers', 'avatars.js')
 , workerData: {
-    output: config.get('output')
+    outputdir: config.get('outputdir')
   }
 })
 
 const history = new Piscina({
   filename: path.resolve(__dirname, 'workers', 'history.js')
 , workerData: {
-    output: config.get('output')
+    outputdir: config.get('outputdir')
   }
 })
 
 const commiters = new Piscina({
   filename: path.resolve(__dirname, 'workers', 'commiters.js')
 , workerData: {
-    output: config.get('output')
+    outputdir: config.get('outputdir')
   }
 })
 
@@ -65,11 +65,11 @@ async function combineHistory(repos) {
     const {name} = path.parse(repo)
     return `${name}.txt`
   })
-  const cwd = path.join(config.get('output'), 'gitlog')
+  const cwd = path.join(config.get('outputdir'), 'gitlog')
   const writer = fs.createWriteStream(path.join(cwd, 'gource.txt'))
   const sort = execa('sort')
   const cat = execa('cat', names, {
-    cwd: path.join(config.get('output'), 'gitlog')
+    cwd: path.join(config.get('outputdir'), 'gitlog')
   })
   cat.stdout.pipe(sort.stdin)
   sort.stdout.pipe(writer)

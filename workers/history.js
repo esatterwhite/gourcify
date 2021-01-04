@@ -3,7 +3,7 @@ const path = require('path')
 const execa = require('execa')
 const mkdirp = require('mkdirp')
 const {workerData = {}} = require('piscina')
-const OUTPUT_DIR = path.join(workerData.output || process.cwd(), 'gitlog')
+const OUTPUT_DIR = path.join(workerData.outputdir || process.cwd(), 'gitlog')
 const ESC = '\\'
 module.exports = history
 

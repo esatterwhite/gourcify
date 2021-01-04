@@ -10,7 +10,7 @@ const sharp = require('sharp')
 const got = require('got')
 const mkdirp = require('mkdirp')
 
-const OUTPUT_DIR = path.join(workerData.output || process.cwd(), 'avatar')
+const OUTPUT_DIR = path.join(workerData.outputdir || process.cwd(), 'avatar')
 const SIZE = 100
 const pipeline = promisify(stream.pipeline)
 const log = debuglog('gravatar')

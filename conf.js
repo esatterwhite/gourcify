@@ -4,7 +4,7 @@ const os = require('os')
 const path = require('path')
 
 module.exports = {
-  output: path.join(os.tmpdir(), 'gourcify')
+  outputdir: path.join(os.tmpdir(), 'gourcify')
 , inputdir: process.cwd()
 , gource: {
     filename: 'gource.mp4'
