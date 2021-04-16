@@ -1,6 +1,6 @@
 ## Gourcify
 
-Convery a directory of git repos into a single history to rendered by [gource][]
+Convert a directory of git repos into a single history to rendered by [gource][]
 
 
 ## Requirements
